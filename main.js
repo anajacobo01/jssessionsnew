@@ -483,49 +483,188 @@
 // multiplicacion: si el numero 2 es par, sacas el doble del numero 2 y continuas con la operacion 
 // division: 
 // regresarias tambien el resultado del residuo 
-function calculadora (){
-    let condicion = true
-    while (condicion){
-          let operacion = prompt('Que operacion desea realizar +, -, *, /, % ')
-          let numerouno = Number(prompt("Elige un número"));
-          let numerodos = Number(prompt("Elige un segundo número"));
-          if (operacion === "+"){
-             if (numerouno % 3 === 0 || numerodos % 3 === 0){
-                alert ("resultado es 0 ");
-             }else{ 
-                 alert(numerouno + numerodos)
-            } 
-          }
-          else if (operacion === "-"){
-              if(numerouno > numerodos){
-                  alert (numerodos - numerouno)
-              }else{
-                alert(numerouno - numerodos);
-              }
-          }
-          else if (operacion === "*"){
-              if(numerodos % 2 === 0) {
-                alert ( numerouno * (numerodos*2)); 
-              }else {
-                alert (numerouno * numerodos);
-              }
-           
-          }
-          else if (operacion === "/"){
-            alert ("Resultado" + numerouno / numerodos);
-            alert ("Residuo" + numerouno % numerodos);
-          }
-          else if (operacion === "%"){
-            alert (numerouno % numerodos);
-          }
-          else {
-              alert("no caracter valido")
-          }
-          let respuesta = prompt('Desea calcular de nuevo: [s/n]')
-             condicion = respuesta === 's' ? true: false;
+// function calculadora (){
+//     let condicion = true
+//     while (condicion){
+//           let operacion = prompt('Que operacion desea realizar +, -, *, /, % ')
+//           let numerouno = Number(prompt("Elige un número"));
+//           let numerodos = Number(prompt("Elige un segundo número"));
+//           if (operacion === "+"){
+//              if (numerouno % 3 === 0 || numerodos % 3 === 0){
+//                 alert ("resultado es 0 ");
+//              }else{ 
+//                  alert(numerouno + numerodos)
+//             } 
+//           }
+//           else if (operacion === "-"){
+//               if(numerouno > numerodos){
+//                   alert (numerodos - numerouno)
+//               }else{
+//                 alert(numerouno - numerodos);
+//               }
+//           }
+//           else if (operacion === "*"){
+//               if(numerodos % 2 === 0) {
+//                 alert ( numerouno * (numerodos*2)); 
+//               }else {
+//                 alert (numerouno * numerodos);
+//               }
+//           }
+//           else if (operacion === "/"){
+//             alert ("Resultado" + numerouno / numerodos);
+//             alert ("Residuo" + numerouno % numerodos);
+//           }
+//           else if (operacion === "%"){
+//             alert (numerouno % numerodos);
+//           }
+//           else {
+//               alert("no caracter valido")
+//           }
+//           let respuesta = prompt('Desea calcular de nuevo: [s/n]')
+//              condicion = respuesta === 's' ? true: false;
         
-            alert("Gracias por usar la calculadora")
-        }
+//             alert("Gracias por usar la calculadora")
+//         }
     
-}
-calculadora ();
+// }
+// calculadora ();
+
+// Arrays: Conjunto de elementos ordenados 
+// su ordenacion comienza en 0 y termina en n-1 (donde n es el total de arreglos)
+
+// declaracion de array 
+// const arreglo = [];
+// total de elementos 
+// // propiedad length
+
+// const elementos = [];
+// console.log('total de elementos: ', elementos.length);
+
+// // Obtener elementos de mi arreglo 
+// // a partir del indice de mi elemento
+// //              0        1          2        3(n-1)
+// const nombres=['Juan', 'Antonio', 'Miguel', 'Leonel'];
+// console.log (nombres[2]);
+
+// // Editar valor del elemento 
+// nombres[2] = 'Pedro';
+// console.log(nombres);
+
+// // Agregar valores
+
+// // metodo push 
+
+// nombres.push('Lorena');
+// console.log(nombres);
+// const nuevonombres = ['Francisco', 'Maria', 'Ernesto']
+// let nombres2 = nombres.concat(nuevonombres);
+
+// console.log(nombres2);
+
+//Ejercicio 1: Preguntarle al usuario sus calificaciones 
+// Proporcioname tu calificacion 
+// Deseas agregar una nueva calificacion?
+// Sacar el promedio de calificaciones 
+// Si el promedio es menor a 7 enviar mensaje de "Nos vemos el siguiente semestre"
+// Si el promedio es entre 7 y 8 solo "Felicidades"
+// Si el promedio es de 9 o 10 ... Preguntar su nombre y se va a felicitar con su nombre 
+
+
+let condicion = true
+let calificacion = []
+let promedio = 0
+
+while (condicion)
+ calificacion = Number(prompt('Proporciona una calificacion'));
+  let respuesta = prompt('Deseas agregar una nueva calificacion: [s/n]')        
+  if (condicion = respuesta === 's'){
+    let calificaciondos = Number(prompt('Proporciona una nueva calificacion'));
+    console.log = ("Calificacion dos: " + calificaciondos);
+    calificacion.push(calificaciondos);
+
+    for (let i=0 ; i <= calificacion.length; calificacion++){
+      promedio = promedio + calificacion[i];
+      console.log ("el promedio es:" + promedio)
+    }
+  } else condicion = false;
+  {
+    alert("Tu promedio es:" + promedio);
+  } 
+
+  // if (promedio < 7 ){
+  //     alert ("Nos vemos el siguiente semestre");
+  //   }else if  (promedio >= 7 && promedio <=8 ){
+  //     alert ("Felicidades");
+  //   }else if (promedio >=9 && promedio <=10){ 
+  //     let nombre = (prompt('Proporciona tu nombre'));
+  //     alert ("Felicidades " + nombre);
+  //   } 
+    
+  
+// 
+
+// Ejercicio 2:
+// Dado un arreglo de numeros aleatorios
+
+// determinar
+// cuantos son pares - generar un arreglo de ellos
+// cuantos impares - generar un arreglo de ellos
+// Eliminar los divisibles entre 3 del arreglo original - generar un arreglo con ellos
+// obtener los divisibles entre 10 en un nuevo arreglo
+// imprimir en consola los arreglos generados
+
+// para generar numero aleatorios
+// function numeroAleatorio(min, max) {
+//     return Math.round(Math.random() * (max - min) + min);
+// }
+
+// let aleatorios = [];
+// let pares = [];
+// let impares = [];
+// let tres =[];
+// let diez = [];
+
+// for (let j= 0; j<20; j++){
+//   aleatorios.push(numeroAleatorio(0,300));
+// }
+// function numeroAleatorio(min, max) {
+//  return Math.round(Math.random() * (max - min) + min);
+// }
+// for (let i = 0; i < aleatorios.length; i++){
+//   if (aleatorios[i] % 2 === 0){
+//      pares.push(aleatorios[i]);
+//     } else {
+//       impares.push(aleatorios[i]);
+//     }
+//   if (aleatorios[i] % 3 === 0){
+//       tres.push(aleatorios[i]);
+//       aleatorios.splice(i , 1);
+//     }
+//   if (aleatorios[i] % 10 === 0){
+//       diez.push(aleatorios[i]);
+//     }
+//    }
+//   console.log ("Arreglo completo " + aleatorios);
+//   console.log ("Numeros Pares " + pares);
+//   console.log ("Numeros Impares " + impares);
+//   console.log ("Divisibles en tres " + tres);
+//   console.log ("Divisible en diez " + diez);
+
+  // //Objeto: Estructura de dato donde manejamos llaves(Comunmente llamadas propiedades)
+  // y valores (de cualquier tipo), podemos guardar funciones communmente llamados MediaStreamAudioDestinationNode
+
+  // declaracion
+  // const persona {};;
+  // const persona = {
+  //   nombre: 'Pedro'
+  // };
+  // persona ['direccion'] = 'Ciudad de Mèxico', 'CDMX';
+  // // genera metodos 
+
+  // persona ['saluda'] = function (){
+  //   console.log ('mi nombre es: Pedro')
+  // };
+
+  // persona ['donde vivo ']= function (){
+  //   console.log ('yo vivo', this.direccion)
+  // };
