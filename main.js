@@ -570,26 +570,26 @@
 // Si el promedio es de 9 o 10 ... Preguntar su nombre y se va a felicitar con su nombre 
 
 
-let condicion = true
-let calificacion = []
-let promedio = 0
+// let condicion = true
+// let calificacion = []
+// let promedio = 0
 
-while (condicion)
- calificacion = Number(prompt('Proporciona una calificacion'));
-  let respuesta = prompt('Deseas agregar una nueva calificacion: [s/n]')        
-  if (condicion = respuesta === 's'){
-    let calificaciondos = Number(prompt('Proporciona una nueva calificacion'));
-    console.log = ("Calificacion dos: " + calificaciondos);
-    calificacion.push(calificaciondos);
+// while (condicion)
+//  calificacion = Number(prompt('Proporciona una calificacion'));
+//   let respuesta = prompt('Deseas agregar una nueva calificacion: [s/n]')        
+//   if (condicion = respuesta === 's'){
+//     let calificaciondos = Number(prompt('Proporciona una nueva calificacion'));
+//     console.log = ("Calificacion dos: " + calificaciondos);
+//     calificacion.push(calificaciondos);
 
-    for (let i=0 ; i <= calificacion.length; calificacion++){
-      promedio = promedio + calificacion[i];
-      console.log ("el promedio es:" + promedio)
-    }
-  } else condicion = false;
-  {
-    alert("Tu promedio es:" + promedio);
-  } 
+//     for (let i=0 ; i <= calificacion.length; calificacion++){
+//       promedio = promedio + calificacion[i];
+//       console.log ("el promedio es:" + promedio)
+//     }
+//   } else condicion = false;
+//   {
+//     alert("Tu promedio es:" + promedio);
+//   } 
 
   // if (promedio < 7 ){
   //     alert ("Nos vemos el siguiente semestre");
@@ -668,3 +668,245 @@ while (condicion)
   // persona ['donde vivo ']= function (){
   //   console.log ('yo vivo', this.direccion)
   // };
+
+  //POO (Programacion Orientada a Objetos)
+  //OOP (Oriented Objects Programming)
+
+  // Es un paradigma de programación que usa clases y objetos para resolver problemas 
+
+  // abstraccion: es el obtener las caracteristicas principales
+
+  // ejemplo:
+  // Caracteristicas de un animal
+  // numero de patas
+  // tiene cola 
+  // genero
+  // tamaño 
+  // clase (hervivoro, carnivoro, omnivoro)
+  // peso 
+  // peligro de extinsion 
+
+  // acciones hace 
+  // comer 
+  // reproducirse
+  // emitir sonido
+  // moverse 
+  // necesidades 
+
+
+
+  // encapsulacion 
+  // que la unica manera de poder ocupar propiedades 
+  // y metodos a partir del objeto 
+  // solo puedo afectar a la clase desde la propia clase 
+
+  // herencia
+  // que puedo heredar propiedades y metodos de una clase es decir a partir de una clase puedo crear otra clase 
+
+  // clase chita 
+  // heredar de clase animal y solo añadir las propiedades y metodos propios del chita 
+
+  // polimorfismo 
+  // que puedo hacer el mismo metodo pero de diferente manera 
+  
+  // chita puede moverse 
+  //moverse: avanza saltando cada dos pasos 
+
+  // funciones constructoras
+  // crear una funcion, asignarla a una variable y pasar parametros si fuera necesario 
+//   const Animal = function(tamano, peso, patas=4, cola=true, genero='M', clase='omnivoro', extincion){
+//     this.noPatas = 4;
+//     this.tieneCola = true;
+//     this.genero = 'M';
+//     this.tamano = null;
+//     this.clase = 'omnivoro';
+//     this.peso = null;
+//     this.extincion = false;
+// }
+
+//   // comer 
+//   this.comer = function(){
+//     console.log('Esta comiendo');
+//   }
+//   // reproducirse
+//   this.reproducirse = function(){
+//     console.log('Esta reproduciendose');
+//   }
+//   // emitir sonido
+//   this.emitirSonido = function(){
+//     console.log('Esta emitiendo un sonido');
+//   }
+//   // moverse 
+//   this.moverse = function(){
+//     console.log('Esta moviendose');
+//   }
+//   // necesidades 
+//   this.comer = function(){
+//     console.log('Esta haciendo algo');
+//   }
+
+//   const animal1 = new Animal();
+//   animal1.moverse();
+//   animal2.emitaSonido();
+
+//   // Ejercicio 1 
+//   // trabajas en una escuela y vas a registrar a los alumnos 
+//   // Genera las funciones constructoras necesarias para poder registrar a los alumnos 
+
+
+//   const Alumno = function (){
+//     this.nombre = null ;
+//     this.apellido =null;
+//     this.grado = null;
+//     this.promedio = null;
+//     this.telefono = null;
+
+//   this.registroDatos = function(){
+//     this.nombre =  prompt("Coloca el nombre del estudiante");
+//     this.apellido =  prompt("Coloca el apellido");
+//     this.telefono = Number.propmt ("Coloca el telefono");
+//    }
+ 
+//    this.registroGrado = function (){
+//     this.grado = prompt ("Ingresa el grado en el que estas");
+//     this.promedio = prompt ("Ingresa el promedio de tu ultimo grado");
+//    }
+//   }
+ 
+  
+//   const alumno1 = new Alumno();
+//   alumno1.registroDatos();
+//   alumno1.registroGrado();
+// // Herenia entre funciones constructoras
+// //Javascript solo permite heredar de una clase o funcion constructora
+//   // el uso del protype 
+
+//   const Cheeta = function(peso, tamano, patas, cola, genero, clase, extincion){
+//     this.manchas = true; 
+//     this.velocidad = null; 
+
+//     Animal.call(this, peso, tamano, patas, cola, genero, clase, extincion)
+
+//     this.moverse= function(){
+//       console.log('Esta saltando cada dos pasos');
+//     }
+  
+//   }
+
+//   const cheeta1 = new Cheeta ('78kg, '75cm', '200m/s', true, 4, true, 'H', 'carnivoro', false );
+// console.log (cheeta1);
+
+//Ejercicio2 
+// se ha solicitado una nueva funcionalidad ahora necesitamos registrar profesores 
+// refactorice su codigo para poder registrar profesores y alumnos 
+
+// const Alumno = function (){
+//   this.nombre = null ;
+//   this.apellido =null;
+//   this.grado = null;
+//   this.promedio = null;
+//   this.telefono = null;
+
+// this.registroDatos = function(){
+//   this.nombre =  prompt("Coloca el nombre del estudiante");
+//   this.apellido =  prompt("Coloca el apellido");
+//   this.telefono = Number.propmt ("Coloca el telefono");
+//  }
+
+//  this.registroGrado = function (){
+//   this.grado = prompt ("Ingresa el grado en el que estas");
+//   this.promedio = prompt ("Ingresa el promedio de tu ultimo grado");
+//  }
+// }
+// const Profesor = function(nombre, apellido, grado, promedio, telefono){
+//   this.nombreProfesor = 'Pedro';
+//   this.apellidoProfesor = 'Perez';
+//   this.telefonoProfesor = '434384934';
+//  Alumno.call (this, nombre, apellido, grado, promedio, telefono)
+// }
+// const registronuevo = new Profesor('Pablo', 'Ruiz', '3º', '10', '3439439');
+// console.log (registronuevo);
+
+// Clases de Javascript ES6 
+// no se ocupan funciones constructoras
+// ahora ocupamos la palabra reservada class y un metodo constructor 
+
+// class Humano {
+//   constructor (altura, peso){
+//     // se ejecuta primero 
+//     // inicializar propiedades
+//     this.altura = altura; 
+//     this.peso = peso; 
+//   }
+//   // metodos de la clase 
+
+//   caminar (){}
+//   hablar (){}
+//   comer (){}
+// }
+// const humano1 = new Humano('1.70m', '70kg');
+
+// humano1.hablar();
+
+// class Alumno {
+//   constructor (nombre, apellido, grado, promedio, telefono){
+//     this.nombre = nombre;
+//     this.apellido = apellido;
+//     this.grado = grado;
+//     this.promedio = promedio;
+//     this.telefono = telefono;
+//   }
+//     registroDatos (){
+//       console.log ("Se registro el primer usuario");
+//     }
+// }
+// const registrouno = new Alumno ('Juan', 'Perez', '3', '10', '3434343');
+// registrouno.registroDatos()
+
+
+// Herencia con clases ES6
+// class Persona extends Humano{
+//   constructor (altura, peso, nombre, edad){
+//     super(altura, peso,);
+//   }
+// }
+// console.log(profesor1);
+
+// Ejercicio 4: Refactorizar la clase alumno con herencia 
+// Postwork: Ejercicio completo 
+//Ejercicio de la agenda telefonica con clases o tema libre 
+
+
+
+
+var lista = [0,1,2,3,4,5,6,7,8,9,10];
+
+
+var listaFilter = lista.filter(function(item){
+  return item % 2 == 0;
+})
+console.log = (listaFilter);
+
+// var impares = listaFilter;
+// console.log = (impares);
+// var pares = impares.map(function(itme){
+//   return item + 1;
+// })
+// console.log = (pares);
+
+
+// var original = lista.reduce(function(acumulador, item){
+//   return acumulador + item;
+// })
+
+// var imp = impares.reduce(function(acumulador, item){
+//   return acumulador + item;
+// })
+
+// var par = impares.reduce(function(acumulador, item){
+//   return acumulador + item;
+// })
+
+// console.log = (original);
+// console.log = (imp);
+// console.log = (par);
