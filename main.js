@@ -878,35 +878,37 @@
 
 
 
-
-var lista = [0,1,2,3,4,5,6,7,8,9,10];
-
-
-var listaFilter = lista.filter(function(item){
-  return item % 2 == 0;
-})
-console.log = (listaFilter);
-
-// var impares = listaFilter;
-// console.log = (impares);
-// var pares = impares.map(function(itme){
-//   return item + 1;
-// })
-// console.log = (pares);
+// let nombres = [];
+// let nombresDos = [];
 
 
-// var original = lista.reduce(function(acumulador, item){
-//   return acumulador + item;
-// })
+// for (let i = 0; i < 5; i++){
+//   let nombre =  prompt("Coloca un nombre");
+//   nombres.push(nombre)
+// }
+// console.log("Lista nombres " + nombres);
 
-// var imp = impares.reduce(function(acumulador, item){
-//   return acumulador + item;
-// })
+  
+//  const Letra = function(){
+//    let letra = prompt("Coloca una letra");
+//    return letra;
+//  }
+//  let letra = Letra();
+// for (let j=0; j< nombres.length; j++){
+  
+//   if (nombres[j].includes(letra)){
+//     nombresDos.push(nombres[j]);
+//   }
+// }
+// console.log("Lista nombres con letra " +  letra + ": "+ nombresDos);
 
-// var par = impares.reduce(function(acumulador, item){
-//   return acumulador + item;
-// })
+const nombres = [];
+const vocales = ['a', 'e','i', 'o', 'u']
 
-// console.log = (original);
-// console.log = (imp);
-// console.log = (par);
+for (let i = 0; i < 5; i++){
+  let nombresUser =  prompt("Coloca un nombre");
+  nombres.push(nombresUser)
+}
+// [Ana, Juan, Luis] 
+console.log(nombres.filter((nombre) => nombre.length % 2 === 0 || (nombre.length > 3 && vocales.includes(nombre[3]))));
+ 
